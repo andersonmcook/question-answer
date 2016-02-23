@@ -12,11 +12,23 @@ app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', (req, res) => {
-  res.send('home');
+  res.render('form');
 });
 
-app.post('/:question', (req, res) => {
-  Question.create ///
+app.post('/question', (req, res) => {
+  Question.create(req.body, (err, data) => {
+    if (err) throw err;
+    res.redirect(`/${data.url}`)
+  });
+});
+
+app.get('/:question', (req, res) => {
+  console.log(req);
+  Question.findOne({url: req.params.question}, (err, data) => {
+    if (err) throw err;
+    res.render('answer', {words: data});
+  });
+
 });
 
 

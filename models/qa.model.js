@@ -2,8 +2,16 @@
 
 const mongoose = require('mongoose');
 
-module.exports = mongoose.model('Questions', mongoose.Schema({
+const Question = mongoose.Schema({
   question: String,
-  answer: String
-}));
+  answer: String,
+  url: String
+});
+
+Question.pre('save', function (next) {
+  this.url = this.question.replace(/\?/g, "").split(" ").join("").toLowerCase();
+  next();
+});
+
+module.exports = mongoose.model('Questions', Question);
 
