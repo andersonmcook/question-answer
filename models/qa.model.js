@@ -8,6 +8,7 @@ const Question = mongoose.Schema({
   url: String
 });
 
+// before save, create url from question
 Question.pre('save', function (next) {
   this.url = this.question.replace(/[\?\s+/<>()]/g, "").toLowerCase();
   next();
