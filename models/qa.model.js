@@ -9,7 +9,7 @@ const Question = mongoose.Schema({
 });
 
 Question.pre('save', function (next) {
-  this.url = this.question.replace(/[\?\/<>()]/g, "").split(" ").join("").toLowerCase();
+  this.url = this.question.replace(/[\?\s+/<>()]/g, "").toLowerCase();
   next();
 });
 
