@@ -1,2 +1,7 @@
-h2(style='font-size: 3em; text-align: center; font-family: sans-serif; text-transform: uppercase; word-wrap: break-word')= words.question
-h1(style='font-size: 18em; text-align: center; font-family: sans-serif; text-transform: uppercase; word-wrap: break-word; margin-top: 0')= words.answer
+html
+  head
+    title #{words.question}?
+    link(rel='stylesheet' href='css/style.css')
+
+h2 #{words.question}?
+h1 #{words.answer}!
