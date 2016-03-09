@@ -12,3 +12,14 @@ h1 {
 h2 {
   font-size: 3em;
 }
+
+form {
+  font-size: 2em;
+  font-family: sans-serif;
+}
+
+#question, #answer {
+  font-size: .5em;
+  display: block;
+  margin: .5em auto;
+}

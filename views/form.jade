@@ -1,9 +1,13 @@
-form(method='POST' action='/question')
-  .input-group
-    label(for='question') Question
-    input#question(type='text' name='question' autofocus required)
-  .input-group
-    label(for='answer') Answer
-    input#answer(type='text' name='answer' required)
-  .input-group
-    input(type='submit', value='Submit')
+html
+  head
+    link(rel='stylesheet' href='css/style.css')
+  body
+    form(method='POST' action='/question')
+      .input-group
+        label(for='question') Question
+        input#question(type='text' name='question' autofocus required)
+      .input-group
+        label(for='answer') Answer
+        input#answer(type='text' name='answer' required)
+      .input-group
+        input(type='submit', value='Submit')
