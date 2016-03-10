@@ -22,4 +22,14 @@ form {
   font-size: .5em;
   display: block;
   margin: .5em auto;
+  border: 1px solid black;
+  padding: .5em;
+  width: 50%;
+}
+
+input[type=submit] {
+  font-size: .5em;
+  border: 1px solid black;
+  background: white;
+  padding: .5em;
 }
