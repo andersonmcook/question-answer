@@ -23,16 +23,17 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-  res.render('form')
-});
+// options
+app.locals.options = {
+  qPlace: "Write a question with an obvious answer.",
+  aPlace: "Obvious Answer"
+}
 
-app.post('/question', (req, res) => {
-  Question.create(req.body, (err, data) => {
-    if (err) throw err;
-    res.redirect(`/${data.url}`)
-  });
-});
+// form
+app.get('/', answer.form)
+
+// save qa
+app.post('/question', answer.saveQA)
 
 // controller for rendering answer
 app.get('/:question', answer.renderAnswer)

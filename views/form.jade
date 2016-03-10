@@ -6,13 +6,13 @@ html
     form(method='POST' action='/question')
       .input-group
         label(for='question') Question
-        input#question(type='text' name='question' autofocus required)
+        input#question(type='text' name='question' autofocus required placeholder='#{options.qPlace}')
         label.colors(for='questioncolor') Question Color
         input#questioncolor(type='color' name='questioncolor')
       hr
       .input-group
         label(for='answer') Answer
-        input#answer(type='text' name='answer' required)
+        input#answer(type='text' name='answer' required placeholder='#{options.aPlace}')
         label.colors(for='answercolor') Answer Color
         input#answercolor(type='color' name='answercolor')
       hr

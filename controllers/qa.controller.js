@@ -1,5 +1,7 @@
 'use strict'
 
+const express = require('express')
+const app = express()
 const Question = require('../models/qa.model')
 
 module.exports = {
@@ -17,6 +19,17 @@ module.exports = {
         data.bottomcolor === undefined ? data.bottomcolor =  'white' : data.bottomcolor = data.bottomcolor
         res.render('answer', {words: data});
       }
-    });
+    })
+  },
+
+  saveQA (req, res) {
+    Question.create(req.body, (err, data) => {
+      if (err) throw err;
+      res.redirect(`/${data.url}`)
+    })
+  },
+
+  form (req, res) {
+    res.render('form')
   }
 }

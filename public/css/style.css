@@ -38,11 +38,8 @@ input[type=submit] {
 
 input[type=color] {
   border: none;
-  /*width: 12.5%;*/
-  /*height: 6.125%;*/
   height: 4em;
   background: white;
-  /*vertical-align: text-bottom;*/
 }
 
 .colors {
