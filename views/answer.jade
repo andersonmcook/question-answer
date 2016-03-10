@@ -2,6 +2,6 @@ html
   head
     title #{words.question}?
     link(rel='stylesheet' href='css/style.css')
-  body
-    h2 #{words.question}?
-    h1 #{words.answer}!
+  body(style="background: linear-gradient(#{words.topcolor}, #{words.bottomcolor});")
+    h2(style="color: #{words.questioncolor};") #{words.question}?
+    h1(style="color: #{words.answercolor};") #{words.answer}!

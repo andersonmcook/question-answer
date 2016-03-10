@@ -5,7 +5,11 @@ const mongoose = require('mongoose');
 const Question = mongoose.Schema({
   question: String,
   answer: String,
-  url: String
+  url: String,
+  questioncolor: String,
+  answercolor: String,
+  topcolor: String,
+  bottomcolor: String
 });
 
 // before save, create url from question
