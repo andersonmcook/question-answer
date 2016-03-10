@@ -42,6 +42,11 @@ input[type=color] {
   background: white;
 }
 
+select {
+  vertical-align: super;
+  margin-left: .25em;
+}
+
 .colors {
   font-size: .5em;
   vertical-align: super;

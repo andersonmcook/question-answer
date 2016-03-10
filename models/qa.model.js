@@ -9,7 +9,9 @@ const Question = mongoose.Schema({
   questioncolor: String,
   answercolor: String,
   topcolor: String,
-  bottomcolor: String
+  bottomcolor: String,
+  questionfont: String,
+  answerfont: String
 });
 
 // before save, create url from question

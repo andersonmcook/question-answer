@@ -26,7 +26,8 @@ app.use(express.static('public'))
 // options
 app.locals.options = {
   qPlace: "Write a question with an obvious answer.",
-  aPlace: "Obvious Answer"
+  aPlace: "Obvious Answer",
+  fonts: ['sans-serif', 'serif', 'monospace', 'fantasy', 'cursive']
 }
 
 // form

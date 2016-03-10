@@ -7,14 +7,27 @@ html
       .input-group
         label(for='question') Question
         input#question(type='text' name='question' autofocus required placeholder='#{options.qPlace}')
+
         label.colors(for='questioncolor') Question Color
         input#questioncolor(type='color' name='questioncolor')
+
+        label.colors(for='questionfont') Question Font
+        select#questionfont(type='color' name='questionfont')
+          each option in options.fonts
+            option(value=option)= option
+
       hr
       .input-group
         label(for='answer') Answer
         input#answer(type='text' name='answer' required placeholder='#{options.aPlace}')
+
         label.colors(for='answercolor') Answer Color
         input#answercolor(type='color' name='answercolor')
+
+        label.colors(for='answerfont') Answer Font
+        select#answerfont(type='color' name='answerfont')
+          each option in options.fonts
+            option(value=option)= option
       hr
       .input-group
         label.colors(for='top') Top Color

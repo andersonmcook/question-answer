@@ -17,6 +17,8 @@ module.exports = {
         data.answercolor === undefined ? data.answercolor =  'black' : data.answercolor = data.answercolor
         data.topcolor === undefined ? data.topcolor =  'white' : data.topcolor = data.topcolor
         data.bottomcolor === undefined ? data.bottomcolor =  'white' : data.bottomcolor = data.bottomcolor
+        data.questionfont === undefined ? data.questionfont =  'sans-serif' : data.questionfont = data.questionfont
+        data.answerfont === undefined ? data.answerfont =  'sans-serif' : data.answerfont = data.answerfont
         res.render('answer', {words: data});
       }
     })
