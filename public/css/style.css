@@ -34,3 +34,16 @@ input[type=submit] {
   padding: .5em;
   margin-top: .5em;
 }
+
+input[type=color] {
+  border: none;
+  width: 12.5%;
+  height: 6.125%;
+  background: white;
+  vertical-align: text-bottom;
+}
+
+.colors {
+  font-size: .5em;
+  vertical-align: super;
+}
