@@ -45,9 +45,29 @@ input[type=color] {
 select {
   vertical-align: super;
   margin-left: .25em;
+  border: none;
+  font-size: .5em;
 }
 
 .colors {
   font-size: .5em;
   vertical-align: super;
 }
+
+/*FONTS*/
+/*.sans-serif {
+  font-family: sans-serif;
+}
+.serif {
+  font-family: serif;
+}
+.monospace {
+  font-family: monospace;
+}
+.fantasy {
+  font-family: fantasy;
+}
+.cursive {
+  font-family: cursive;
+}*/
+/*END FONTS*/

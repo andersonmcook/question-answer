@@ -16,7 +16,7 @@ const Question = mongoose.Schema({
 
 // before save, create url from question
 Question.pre('save', function (next) {
-  this.url = this.question.replace(/[\?\s+/<>()]/g, "").toLowerCase();
+  this.url = this.question.replace(/[\?\s+/<>(){}]/g, "").toLowerCase();
   next();
 });
 
