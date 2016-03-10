@@ -1,29 +1,30 @@
-'use strict';
+'use strict'
 
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
 const Question = require('./models/qa.model')
-const PORT = process.env.PORT || 3000;
+const answer = require('./controllers/qa.controller')
+const PORT = process.env.PORT || 3000
 
-const MONGODB_HOST = process.env.MONGODB_HOST || 'localhost';
-const MONGODB_PORT = process.env.MONGODB_PORT || 27017;
-const MONGODB_USER = process.env.MONGODB_USER || '';
-const MONGODB_PASS = process.env.MONGODB_PASS || '';
+const MONGODB_HOST = process.env.MONGODB_HOST || 'localhost'
+const MONGODB_PORT = process.env.MONGODB_PORT || 27017
+const MONGODB_USER = process.env.MONGODB_USER || ''
+const MONGODB_PASS = process.env.MONGODB_PASS || ''
 const MONGODB_DB = 'questionasker';
-const MONGODB_URL_PREFIX = MONGODB_USER ? `${MONGODB_USER}:${MONGODB_PASS}@` : '';
+const MONGODB_URL_PREFIX = MONGODB_USER ? `${MONGODB_USER}:${MONGODB_PASS}@` : ''
 
-const MONGODB_URL = `mongodb://${MONGODB_URL_PREFIX}${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_DB}`;
+const MONGODB_URL = `mongodb://${MONGODB_URL_PREFIX}${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_DB}`
 
-app.set('view engine', 'jade');
+app.set('view engine', 'jade')
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}))
 
-app.use(express.static('public'));
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  res.render('form');
+  res.render('form')
 });
 
 app.post('/question', (req, res) => {
@@ -33,16 +34,8 @@ app.post('/question', (req, res) => {
   });
 });
 
-app.get('/:question', (req, res) => {
-  Question.findOne({url: req.params.question}, (err, data) => {
-    if (err) throw err;
-    if (data === null) {
-      res.redirect('/');
-    }
-    res.render('answer', {words: data});
-  });
-
-});
+// controller for rendering answer
+app.get('/:question', answer.renderAnswer)
 
 //
 // connect
