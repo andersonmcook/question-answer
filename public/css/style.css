@@ -8,10 +8,13 @@ body {
 h1 {
   font-size: 18em;
   margin-top: .125em;
+  line-height: 1em;
 }
 
 h2 {
   font-size: 3em;
+  line-height: 1em;
+  margin-top: 1em;
 }
 
 form {
