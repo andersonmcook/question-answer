@@ -13,18 +13,18 @@ module.exports = {
       if (data === null) {
         res.redirect('/')
       } else if (data.answerfont === undefined) {
+        console.log('undefined options', data)
         // const defaultPres = {
         //   questioncolor: 'black',
 
         // }
+        data.questioncolor = data.questioncolor || 'black'
+        data.answercolor = data.answercolor || 'black'
+        data.topcolor = data.topcolor || 'white'
+        data.bottomcolor = data.bottomcolor || 'white'
+        data.questionfont = data.questionfont || 'sans-serif'
+        data.answerfont = data.answerfont || 'sans-serif'
 
-        data.questioncolor === undefined ? data.questioncolor =  'black' : data.questioncolor = data.questioncolor
-        data.answercolor === undefined ? data.answercolor =  'black' : data.answercolor = data.answercolor
-        data.topcolor === undefined ? data.topcolor =  'white' : data.topcolor = data.topcolor
-        data.bottomcolor === undefined ? data.bottomcolor =  'white' : data.bottomcolor = data.bottomcolor
-        data.questionfont === undefined ? data.questionfont =  'sans-serif' : data.questionfont = data.questionfont
-        data.answerfont === undefined ? data.answerfont =  'sans-serif' : data.answerfont = data.answerfont
-        // data.answerfont = data.answerfont || 'sans-serif'
         res.render('answer', {words: data})
       } else {
         res.render('answer', {words: data})
