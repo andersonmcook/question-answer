@@ -13,11 +13,7 @@ module.exports = {
       if (data === null) {
         res.redirect('/')
       } else if (data.answerfont === undefined) {
-        console.log('undefined options', data)
-        // const defaultPres = {
-        //   questioncolor: 'black',
-
-        // }
+        console.log('in undefined options', data)
         data.questioncolor = data.questioncolor || 'black'
         data.answercolor = data.answercolor || 'black'
         data.topcolor = data.topcolor || 'white'
