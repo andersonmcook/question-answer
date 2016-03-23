@@ -5,7 +5,6 @@
 // get question
     $('#question').keyup(function () {
       const question = $('#question').val()
-      // const testColor = $('#top').val()
       $('h2').text(question + '?')
     })
 
@@ -28,6 +27,32 @@
       const bottom = $('#bottom').val()
       $('#preview').css('background', `linear-gradient(${top}, ${bottom})`)
     })
+
+// get question font
+    $('#questionfont').change(function () {
+      previewer('#questionfont', 'h2', 'font-family')
+    })
+
+// get answer font
+    $('#answerfont').change(function () {
+      previewer('#answerfont', 'h1', 'font-family')
+    })
+
+// get question color
+    $('#questioncolor').change(function () {
+      previewer('#questioncolor', 'h2', 'color')
+    })
+
+// get answer color
+    $('#answercolor').change(function () {
+      previewer('#answercolor', 'h1', 'color')
+    })
+
+// repeatable function to get color and font-family
+    function previewer (element, preview, style) {
+      const value = $(element).val()
+      $(preview).css(style, value)
+    }
 
   })
 })();
