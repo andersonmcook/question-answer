@@ -1,0 +1,21 @@
+{
+  "name": "question-answer",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Anderson Cook <andersonmcook@gmail.com> (https://github.com/andersonmcook)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/andersonmcook/question-answer",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

@@ -31,9 +31,15 @@ html
       hr
       .input-group
         label.colors(for='top') Top Color
-        input#top(type='color' name='topcolor' required)
+        input#top(type='color' name='topcolor', value='#ffffff', required)
       .input-group
         label.colors(for='bottom') Bottom Color
-        input#bottom(type='color' name='bottomcolor' required)
+        input#bottom(type='color' name='bottomcolor', value='#ffffff', required)
       .input-group
         input(type='submit', value='Submit')
+    span Preview
+    #preview
+      h2
+      h1
+    script(src='vendor/jquery/dist/jquery.min.js')
+    script(src='javascripts/preview.js')

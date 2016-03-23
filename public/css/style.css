@@ -57,6 +57,10 @@ select {
   vertical-align: super;
 }
 
+#preview {
+  padding: 1em;
+}
+
 /*FONTS*/
 /*.sans-serif {
   font-family: sans-serif;
