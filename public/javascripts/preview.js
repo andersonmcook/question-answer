@@ -9,10 +9,10 @@
     })
 
 // get answer
-  $('#answer').keyup(function () {
-    const answer = $('#answer').val()
-    $('h1').text(answer + '!')
-  })
+    $('#answer').keyup(function () {
+      const answer = $('#answer').val()
+      $('h1').text(answer + '!')
+    })
 
 // get top color
     $('#top').change(function () {
